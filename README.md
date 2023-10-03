@@ -6,9 +6,10 @@
 
 -- Тест (Test);
 
+-- Категория (Category);
+
 -- Вопрос (Question);
 
 -- Ответ (Answer);
 
 -- Результат теста (TestResult).
-
