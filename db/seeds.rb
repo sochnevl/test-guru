@@ -203,17 +203,17 @@ harry_potter_question4.answers.create!([
                                          { body: 'Том Реддл', correct: false }
                                        ])
 
-alex.tests_users.create!([
+alex.test_passings.create!([
                            { status: 'пройден', test: test_ruby },
                            { status: 'в процессе', test: test_harry_potter }
                          ])
 
-kate.tests_users.create!([
+kate.test_passings.create!([
                            { status: 'в процессе', test: test_harry_potter },
                            { status: 'в процессе', test: test_ruby }
                          ])
 
-nikita.tests_users.create!([
+nikita.test_passings.create!([
                              { status: 'в процессе', test: test_html },
                              { status: 'пройден', test: easy_test_movies }
                            ])
