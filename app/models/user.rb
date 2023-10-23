@@ -7,6 +7,8 @@ class User < ApplicationRecord
            dependent: :destroy,
            inverse_of: :author
 
+  validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+
   def tests_by_level(level)
     tests.where(level: level)
   end
