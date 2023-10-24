@@ -17,4 +17,8 @@ class Test < ApplicationRecord
                                        .where(categories: { title: category_name })
                                        .order(title: :desc)
                                    }
+
+  def self.sorted_tests_titles_by_category(category_name)
+    sorted_tests_by_category(category_name).pluck(:title)
+  end
 end
