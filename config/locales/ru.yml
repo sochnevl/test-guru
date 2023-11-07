@@ -1,2 +1,7 @@
 ru:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "Ошибка сохранения записи"
   hello: "Привет, мир"
+
