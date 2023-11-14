@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   resources :tests do
-    resources :questions, shallow: true
+    resources :questions, except: :index, shallow: true
   end
+
 
   # root to: 'tests#index' # - зменение стартово странички в браузере для нашего приложения (направляем в контроллер тест на метод индекс)
 
