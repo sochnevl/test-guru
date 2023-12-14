@@ -2,6 +2,15 @@ ru:
   activerecord:
     errors:
       models:
+        user:
+          attributes:
+            email:
+              blank: "не может быть пустым"
+              invalid: "некорректный формат"
+            password:
+              blank: "не может быть пустым"
+            password_confirmation:
+              confirmation: "не совпадает с паролем"
         test:
           attributes:
             category:
