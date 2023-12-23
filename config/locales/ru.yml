@@ -9,20 +9,29 @@ ru:
               invalid: "некорректный формат"
             password:
               blank: "не может быть пустым"
+              too_short: "слишком короткий (минимум %{count} символов)"
             password_confirmation:
               confirmation: "не совпадает с паролем"
-        test:
-          attributes:
-            category:
-              required: "не может быть пустым"
-            author:
-              required: "не может быть пустым"
-            title:
+            name:
               blank: "не может быть пустым"
-        question:
-          attributes:
-            body:
-              blank: "не может быть пустым"
+              too_short: "слишком короткое (минимум %{count} символов)"
       messages:
         record_invalid: "Ошибка сохранения записи"
+  devise:
+    failure:
+      user:
+        invalid: "Неверный email или пароль" 
+        unauthenticated: "Вам необходимо войти в систему перед продолжением"
+        unconfirmed: "Ваш аккаунт не подтвержден"
+        confirmed: "Ваш аккаунт уже подтвержден"
+      invalid: "Неверный email или пароль" 
+      unauthenticated: "Вам необходимо войти в систему перед продолжением"
+    sessions:
+      user:
+        signed_in: "Вы успешно вошли в систему"
+      signed_in: "Вы успешно вошли в систему"
+    confirmations:
+      user:
+        confirmed: "Ваш аккаунт подтвержден"
+      confirmed: "Ваш аккаунт подтвержден"
   hello: "Привет, мир"
