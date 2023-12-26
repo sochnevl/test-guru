@@ -1,37 +1,40 @@
 ru:
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            email:
-              blank: "не может быть пустым"
-              invalid: "некорректный формат"
-            password:
-              blank: "не может быть пустым"
-              too_short: "слишком короткий (минимум %{count} символов)"
-            password_confirmation:
-              confirmation: "не совпадает с паролем"
-            name:
-              blank: "не может быть пустым"
-              too_short: "слишком короткое (минимум %{count} символов)"
-      messages:
-        record_invalid: "Ошибка сохранения записи"
-  devise:
-    failure:
-      user:
-        invalid: "Неверный email или пароль" 
-        unauthenticated: "Вам необходимо войти в систему перед продолжением"
-        unconfirmed: "Ваш аккаунт не подтвержден"
-        confirmed: "Ваш аккаунт уже подтвержден"
-      invalid: "Неверный email или пароль" 
-      unauthenticated: "Вам необходимо войти в систему перед продолжением"
-    sessions:
-      user:
-        signed_in: "Вы успешно вошли в систему"
-      signed_in: "Вы успешно вошли в систему"
-    confirmations:
-      user:
-        confirmed: "Ваш аккаунт подтвержден"
-      confirmed: "Ваш аккаунт подтвержден"
   hello: "Привет, мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+
+  test_passings:
+    result:
+      header: "Тест %{title} успешно завершен!"
+
+  admin:
+    tests:
+      create:
+        success: "Тест был успешно создан."
+      index:
+        header: "Доступные тесты"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
