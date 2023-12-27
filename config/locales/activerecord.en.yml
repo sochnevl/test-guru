@@ -11,4 +11,3 @@ en:
       messages:
         blank: "can't be blank"
         required: "must exist"
-        
