@@ -11,6 +11,8 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+    select:
+      prompt: "Выберете нужное"
 
   shared:
     errors:
@@ -19,22 +21,64 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    footer:
+      author: "Алексей Сочнев"
+      application_purpose: "Приложение для прохождения и создания тестов"
+      project_school: "Учебный проект в онлайн-школе Thinknetica"
 
   tests:
     index:
       header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      questions_count: "Количество вопросов"
+      actions: "Действия"
+    test:
+      start: 'Старт'
 
   test_passings:
     result:
       header: "Тест %{title} успешно завершен!"
 
   admin:
+    nav:
+      admin_panel: "Панель Администраторов TestGuru"
     tests:
       create:
         success: "Тест был успешно создан."
       index:
         header: "Доступные тесты"
+        create_new_test: "Создать новый тест"
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        questions_count: "Количество вопросов"
+        actions: "Действия"
+      new:
+        create_new_test: "Создать новый тест"
+        back: "Назад"
+      edit:
+        header: "Изменить %{test_title} тест"
+        back: "Назад"
+      show:
+        title: "Название"
+        level: "Уровень"
+        create_new_question: "Создать новый вопрос"
+        edit_test: "Изменить тест"
+        to_tests: "К тестам"
+      test:
+        open: 'Открыть'
+        edit: 'Изменить'
+        delete: "Удалить"
 
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  layouts:
+    application:
+      welcome: "Добро пожаловать"
+      logout: "Выход"
+      registration: "Регистрация"
+      login: "Вход"

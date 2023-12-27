@@ -5,6 +5,10 @@ ru:
     attributes:
       test:
         title: "Название"
+        author: "Автор"
+        category: "Категория"
     errors:
       messages:
         blank: "не может быть пустым"
+        required: "должен существовать"
+        
