@@ -25,6 +25,12 @@ ru:
       author: "Алексей Сочнев"
       application_purpose: "Приложение для прохождения и создания тестов"
       project_school: "Учебный проект в онлайн-школе Thinknetica"
+    nav:
+      welcome: "Добро пожаловать"
+      logout: "Выйти"
+      log_in: "Войти"
+      sign_up: "Регистрация"
+      admin_panel: "Панель Администратора"
 
   tests:
     index:
@@ -44,6 +50,7 @@ ru:
   admin:
     nav:
       admin_panel: "Панель Администраторов TestGuru"
+      logout: "Выход"
     tests:
       create:
         success: "Тест был успешно создан."
