@@ -23,6 +23,12 @@ en:
       author: "Alexey Sochnev"
       application_purpose: "Application for taking and creating tests"
       project_school: "Educational project at the Thinknetica online school"
+    nav:
+      welcome: "Welcome"
+      logout: "Logout"
+      log_in: "Log in"
+      sign_up: "Sign Up"
+      admin_panel: "Admin Panel"
 
   tests:
     index:
@@ -43,6 +49,7 @@ en:
   admin:
     nav:
       admin_panel: "TestGuru Admin Panel"
+      logout: "Log out"
     tests:
       create:
         success: "Test was succesfully created."
