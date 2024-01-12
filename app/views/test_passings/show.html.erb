@@ -2,9 +2,9 @@
 
 <p> Вопрос <%= @test_passing.question_number  %> из <%= @test_passing.number_questions%></p>
 
-<b>
-  <%= @test_passing.current_question.body %>
-</b>
+<p>
+  <b><%= @test_passing.current_question.body %></b>
+</p>
 
 <%= form_with url: test_passing_path(@test_passing), local: true, method: :put do |form|%>
   <%= form.collection_check_boxes :answer_ids, @test_passing.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -14,5 +14,6 @@
     </p>
   <% end %>
 
+  <p><%= button_to 'Gist Question', gist_test_passing_path(@test_passing), method: :post %></p>
   <p> <%= form.submit 'Далее' %> </p>
 <% end %>

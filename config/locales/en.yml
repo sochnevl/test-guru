@@ -45,6 +45,9 @@ en:
   test_passings:
     result:
       header: "The %{title} Test was Completed!"
+    gist:
+      succes: "Gist was succesfully created!"
+      failure: "An error occured while saving gist"
 
   admin:
     nav:
