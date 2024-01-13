@@ -33,6 +33,8 @@ gem 'bootstrap', '~> 5.3'
 
 # NETWORKING
 gem 'faraday'
+gem "octokit", "~> 5.0"
+gem 'dotenv-rails'
 
 
 # Use Active Storage variant

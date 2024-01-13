@@ -1,5 +1,4 @@
-<h1> Прохождение теста: "<%= @test_passing.test.title %>"</h1>
-
+<h1><%= t('.passing_the_test', test_title: @test_passing.test.title) %></h1>
 <p> Вопрос <%= @test_passing.question_number  %> из <%= @test_passing.number_questions%></p>
 
 <p>
@@ -13,7 +12,8 @@
       <%= b.label %>
     </p>
   <% end %>
-
-  <p><%= button_to 'Gist Question', gist_test_passing_path(@test_passing), method: :post %></p>
-  <p> <%= form.submit 'Далее' %> </p>
+  
+  <p> <%= form.submit t('.next') %> </p>
 <% end %>
+
+<p><%= button_to t('.gist_question'), gists_path(@test_passing), method: :post %></p>

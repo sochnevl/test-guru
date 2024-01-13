@@ -16,6 +16,9 @@ class User < ApplicationRecord
            foreign_key: 'author_id',
            dependent: :destroy,
            inverse_of: :author
+  has_many :gists,
+           class_name: 'Gist',
+           foreign_key: 'author_id'
 
   validates :first_name, presence: true
   validates :last_name, presence: true

@@ -1,21 +1,27 @@
+require 'octokit'
+
 class GistQuestionService
 
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
-    @client = client || GitHubClient.new
+    @client = client || Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
   end
 
-  def call(public: true) # Публичные гист
-    @client.create_gist(gist_params(public))
+  def call(public: true)
+    response = @client.create_gist(gist_params(public))
+    OpenStruct.new(
+      'html_url' => response&.html_url,
+      'success?' => response.html_url.present?
+    )
   end
 
   private
 
-  def gist_params(public) # Публичные
+ def gist_params(public)
     {
-      description: "A question about #{@test.title} from TestGuru",
-      public: public,  # Добавляем параметр public в параметры Gist
+      description: I18n.t(".services.gist_question_service.description", title: @test.title).to_s,
+      public: public,  # Добавляем параметр public в параметры Gist (на аккаунт наложены санкции и я могу делать только публичные гисты)
       files: {
         'test-guru-question.txt' => {
           content: gist_content

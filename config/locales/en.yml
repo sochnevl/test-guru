@@ -41,18 +41,31 @@ en:
     test:
       start: 'Start'
 
-
   test_passings:
     result:
       header: "The %{title} Test was Completed!"
-    gist:
-      succes: "Gist was succesfully created!"
-      failure: "An error occured while saving gist"
+    show:
+      passing_the_test: "Passing the test"
+      next: "Next"
+      gist_question: "Gist question"
+
+  gists:
+    create:
+      success: "%{link} successfully saved"
+      failure: "An error occurred while saving gist"
+
+  services:
+    gist_question_service:
+      description: "A question about %{title} from TestGuru"
 
   admin:
     nav:
       admin_panel: "TestGuru Admin Panel"
       logout: "Log out"
+    gists:
+      index:
+        author: "Author"
+        question: "Question"
     tests:
       create:
         success: "Test was succesfully created."
