@@ -93,6 +93,9 @@ en:
         open: 'Open'
         edit: 'Edit'
         delete: "Delete"
+      form_inline:
+        submit: "Ok"
+        enter_test_title: "Enter test title"
 
   tests_mailer:
     completed_test:
