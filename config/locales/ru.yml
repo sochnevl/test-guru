@@ -25,6 +25,7 @@ ru:
       author: "Алексей Сочнев"
       application_purpose: "Приложение для прохождения и создания тестов"
       project_school: "Учебный проект в онлайн-школе Thinknetica"
+      feedback: "Обратная связь"
     nav:
       welcome: "Добро пожаловать"
       logout: "Выйти"
@@ -98,6 +99,20 @@ ru:
       form_inline:
         submit: "ОК"
         enter_test_title: "Введите название теста"
+
+  feedbacks:
+    new:
+      header: "Заголовок"
+    form:
+      subject: "Тема"
+      content: "Содержимое"
+      send: "Отправить"
+    create:
+      create: "Сообщение успешно отправлено"
+
+  feedbacks_mailer:
+    feedback:
+      subject: "Новое сообщение от %{from}"
 
   tests_mailer:
     completed_test:

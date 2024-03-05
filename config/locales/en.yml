@@ -23,6 +23,7 @@ en:
       author: "Alexey Sochnev"
       application_purpose: "Application for taking and creating tests"
       project_school: "Educational project at the Thinknetica online school"
+      feedback: "Feedback"
     nav:
       welcome: "Welcome"
       logout: "Logout"
@@ -96,6 +97,20 @@ en:
       form_inline:
         submit: "Ok"
         enter_test_title: "Enter test title"
+
+  feedbacks:
+    new:
+      header: "Header"
+    form:
+      subject: "Subject"
+      content: "Content"
+      send: "Send"
+    create:
+      create: "Message successfuly sended"
+
+  feedbacks_mailer:
+    feedback:
+      subject: "New message from %{from}"
 
   tests_mailer:
     completed_test:
