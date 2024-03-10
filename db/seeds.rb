@@ -9,9 +9,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #  пользователи
-alex, kate, nikita =
+alex, admin, kate, nikita =
   User.create!([
                  { first_name: 'Алексей', last_name: 'Сочнев', email: 'sochnevl@yandex.ru', password: '653204Alex.', password_confirmation: '653204Alex.', type: 'Admin', confirmed_at: Time.now },
+                 { first_name: 'admin', last_name: 'adminov', email: 'alexiamxsmart@gmail.com', password: 'admin123123', password_confirmation: 'admin123123', type: 'Admin', confirmed_at: Time.now },
                  { first_name: 'Екатерина', last_name: 'Сочнева', email: 'kate@mail.ru', password: '123123', password_confirmation: '123123', confirmed_at: Time.now },
                  { first_name: 'Никас', last_name: 'Никас', email: 'nikas@mail.ru', password: '123123', password_confirmation: '123123', confirmed_at: Time.now }
                ])
