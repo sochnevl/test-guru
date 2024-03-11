@@ -10,32 +10,32 @@
 
 #  пользователи
 alex = User.find_or_create_by!(first_name: 'Алексей', last_name: 'Сочнев', email: 'sochnevl@yandex.ru', type: 'Admin') do |user|
-  user.password = '653204Alex.',
-  user.password_confirmation = '653204Alex.',
+  user.password = '653204Alex.'
+  user.password_confirmation = '653204Alex.'
   user.confirmed_at = Time.now
 end
 
 admin = User.find_or_create_by!(first_name: 'admin', last_name: 'adminov', email: 'alexiamxsmart@gmail.com', type: 'Admin') do |user|
-  user.password = 'admin123123',
-  user.password_confirmation = 'admin123123',
+  user.password = 'admin123123'
+  user.password_confirmation = 'admin123123'
   user.confirmed_at = Time.now
 end
 
 kate = User.find_or_create_by!(first_name: 'Екатерина', last_name: 'Сочнева', email: 'kate@mail.ru') do |user|
-  user.password = '123123',
-  user.password_confirmation = '123123',
+  user.password = '123123'
+  user.password_confirmation = '123123'
   user.confirmed_at = Time.now
 end
 
 nikita = User.find_or_create_by!(first_name: 'Никас', last_name: 'Никас', email: 'nikas@mail.ru') do |user|
-  user.password = '123123',
-  user.password_confirmation = '123123',
+  user.password = '123123'
+  user.password_confirmation = '123123'
   user.confirmed_at = Time.now
 end
 
 borysik = User.find_or_create_by!(first_name: 'Борис', last_name: 'Парусников', email: 'bestfriend@gmail.com', type: 'Admin') do |user|
-  user.password = 'boryapip123',
-  user.password_confirmation = 'boryapip123',
+  user.password = 'boryapip123'
+  user.password_confirmation = 'boryapip123'
   user.confirmed_at = Time.now
 end
 
