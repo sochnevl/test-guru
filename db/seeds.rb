@@ -95,7 +95,7 @@ easy_test_movies = movies.tests.find_or_create_by!(
   author: nikita
 )
 
-easy_test_movies = movies.tests.find_or_create_by!(
+test_harry_potter = movies.tests.find_or_create_by!(
   title: 'Гарри Поттер',
   level: 1,
   author: nikita
