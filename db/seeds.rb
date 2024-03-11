@@ -678,12 +678,12 @@ harry_potter_question4.answers.find_or_create_by!(
 #                                        ])
 
 alex.test_passings.find_or_create_by!(
-  status: 'пройден'
+  status: 'пройден',
   test: test_ruby
 )
 
 alex.test_passings.find_or_create_by!(
-  status: 'в процессе'
+  status: 'в процессе',
   test: test_harry_potter
 )
 
@@ -694,12 +694,12 @@ alex.test_passings.find_or_create_by!(
 #                          ])
 
 kate.test_passings.find_or_create_by!(
-  status: 'в процессе'
+  status: 'в процессе',
   test: test_harry_potter
 )
 
 kate.test_passings.find_or_create_by!(
-  status: 'в процессе'
+  status: 'в процессе',
   test: test_ruby
 )
 
@@ -709,12 +709,12 @@ kate.test_passings.find_or_create_by!(
 #                          ])
 
 nikita.test_passings.find_or_create_by!(
-  status: 'в процессе'
+  status: 'в процессе',
   test: test_html
 )
 
 nikita.test_passings.find_or_create_by!(
-  status: 'пройден'
+  status: 'пройден',
   test: easy_test_movies
 )
 
