@@ -64,6 +64,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
   config.action_mailer.default_url_options = { host: 'test-guruweb.onrender.com' }
+  config.action_mailer.default_options = { from: ENV['MAILER_FROM'] }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',
@@ -71,7 +72,7 @@ Rails.application.configure do
     user_name: ENV['SMTP_USERNAME'],
     password: ENV['SMTP_PASSWORD'],
     authentication: 'plain',
-    enable_starttls: true,
+    enable_starttls_auto: true,
     open_timeout: 5,
     read_timeout: 5
   }
