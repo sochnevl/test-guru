@@ -9,53 +9,35 @@
 #   Character.find_or_create_by(name: 'Luke', movie: movies.first)
 
 #  пользователи
-alex = User.find_or_create_by!(
-  first_name: 'Алексей',
-  last_name: 'Сочнев',
-  email: 'sochnevl@yandex.ru',
-  password: '653204Alex.',
-  password_confirmation: '653204Alex.',
-  type: 'Admin',
-  confirmed_at: Time.now
-)
+alex = User.find_or_create_by!(first_name: 'Алексей', last_name: 'Сочнев', email: 'sochnevl@yandex.ru', type: 'Admin') do |user|
+  user.password = '653204Alex.',
+  user.password_confirmation = '653204Alex.',
+  user.confirmed_at = Time.now
+end
 
-admin = User.find_or_create_by!(
-  first_name: 'admin',
-  last_name: 'adminov',
-  email: 'alexiamxsmart@gmail.com',
-  password: 'admin123123',
-  password_confirmation: 'admin123123',
-  type: 'Admin',
-  confirmed_at: Time.now
-)
+admin = User.find_or_create_by!(first_name: 'admin', last_name: 'adminov', email: 'alexiamxsmart@gmail.com', type: 'Admin') do |user|
+  user.password = 'admin123123',
+  user.password_confirmation = 'admin123123',
+  user.confirmed_at = Time.now
+end
 
-kate = User.find_or_create_by!(
-  first_name: 'Екатерина',
-  last_name: 'Сочнева',
-  email: 'kate@mail.ru',
-  password: '123123',
-  password_confirmation: '123123',
-  confirmed_at: Time.now
-)
+kate = User.find_or_create_by!(first_name: 'Екатерина', last_name: 'Сочнева', email: 'kate@mail.ru') do |user|
+  user.password = '123123',
+  user.password_confirmation = '123123',
+  user.confirmed_at = Time.now
+end
 
-nikita = User.find_or_create_by!(
-  first_name: 'Никас',
-  last_name: 'Никас',
-  email: 'nikas@mail.ru',
-  password: '123123',
-  password_confirmation: '123123',
-  confirmed_at: Time.now
-)
+nikita = User.find_or_create_by!(first_name: 'Никас', last_name: 'Никас', email: 'nikas@mail.ru') do |user|
+  user.password = '123123',
+  user.password_confirmation = '123123',
+  user.confirmed_at = Time.now
+end
 
-borysik = User.find_or_create_by!(
-  first_name: 'Борис',
-  last_name: 'Парусников',
-  email: 'bestfriend@gmail.com',
-  password: 'boryapip123',
-  password_confirmation: 'boryapip123',
-  type: 'Admin',
-  confirmed_at: Time.now
-)
+borysik = User.find_or_create_by!(first_name: 'Борис', last_name: 'Парусников', email: 'bestfriend@gmail.com', type: 'Admin') do |user|
+  user.password = 'boryapip123',
+  user.password_confirmation = 'boryapip123',
+  user.confirmed_at = Time.now
+end
 
 # alex, admin, kate, nikita =
 #   User.find_or_create_by!([
