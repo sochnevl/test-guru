@@ -7,34 +7,24 @@ document.addEventListener('turbolinks:load', function() {
 function sortRowsByTitle() {
   let table = document.querySelector('table')
 
-  //NodeList
-  let rows = table.querySelectorAll('tr')
+  // NodeList
+  let rows = Array.from(table.querySelectorAll('tr')).slice(1)
   let sortedRows = []
 
-  for( let i = 1; i < rows.length; i++ ){
-    sortedRows.push(rows[i])
-  }
-
-  if ( this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
-    sortedRows.sort(compareRowsAsc)
+  if (this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
+    sortedRows = rows.sort(compareRowsAsc)
     this.querySelector('.octicon-arrow-up').classList.remove('hide')
     this.querySelector('.octicon-arrow-down').classList.add('hide')
   } else {
-    sortedRows.sort(compareRowsDesc)
+    sortedRows = rows.sort(compareRowsDesc)
     this.querySelector('.octicon-arrow-up').classList.add('hide')
     this.querySelector('.octicon-arrow-down').classList.remove('hide')
   }
 
-  let sortedTable = document.createElement('table')
-
-  sortedTable.classList.add('table')
-  sortedTable.className = 'table table-hover';
-  sortedTable.appendChild(rows[0])
-  for (let i = 0; i < sortedRows.length; i++) {
-    sortedTable.appendChild(sortedRows[i])    
-  }
-
-  table.parentNode.replaceChild(sortedTable, table)
+  let tbody = table.querySelector('tbody')
+  sortedRows.forEach(row => {
+    tbody.appendChild(row)
+  })
 }
 
 function compareRowsAsc(row1, row2) {
