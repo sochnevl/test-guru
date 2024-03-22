@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :feedbacks, only: %i[new create]
+
   resources :test_passings, only: %i[show update] do
     member do
       get :result
