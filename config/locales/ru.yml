@@ -32,6 +32,7 @@ ru:
       log_in: "Войти"
       sign_up: "Регистрация"
       admin_panel: "Панель Администратора"
+      badges: 'Бейджи'
 
   tests:
     index:
@@ -61,14 +62,29 @@ ru:
     gist_question_service:
       description: "Вопрос теста %{title} из TestGuru"
 
+  badges:
+    index:
+      image: 'Изображение'
+      title: 'Название'
+      description: 'Описание'
+      received: 'Полученный'
+      badges: 'Бейджи'
+      new_badge: 'Новый Бейдж'
+    obtained:
+       badges: 'Бейджи'
+
   admin:
     nav:
       admin_panel: "Панель Администраторов TestGuru"
       logout: "Выход"
+      badges: 'Бейджи'
     gists:
       index:
         author: "Автор"
         question: "Вопрос"
+    badges:
+      create:
+        success: "Бейдж был успешно создан."
     tests:
       create:
         success: "Тест был успешно создан."

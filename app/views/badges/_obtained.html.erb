@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+      <% resource.each do |user_badge|%>
+        <div class="thumbnail">
+          <%= link_to image_tag(user_badge.badge.image_url, size: "50x50", class: "img-thumbnail"), badge_path(user_badge.badge_id) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

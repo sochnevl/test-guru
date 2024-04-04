@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="display-4"><%= @badge.title %></h1>
+
+  <%= image_tag(@badge.image_url, size: "250x250", class: "img-fluid rounded") %>
+
+  <h4 class="mt-4"> Для получения </h4>
+
+  <p class="lead"> <%= @badge.description %> </p>
+
+  <%= link_to 'Back', @pages_back || obtained_badges_path, class: "btn btn-secondary mt-3" %>
+</div>

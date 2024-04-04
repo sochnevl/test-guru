@@ -1,0 +1,6 @@
+<tr>
+  <td class="align-middle"> <%= link_to image_tag(badge.image_url, size: "50x50", class: "img-thumbnail"), badge_path(badge) %> </td>
+  <td class="align-middle"> <%= badge.title %> </td>
+  <td class="align-middle"> <%= badge.description %> </td>
+  <td class="align-middle"> <%= badge.received?(current_user) %> </td>
+</tr>

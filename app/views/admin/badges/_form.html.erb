@@ -1,0 +1,30 @@
+<%= form_with model: [:admin, @badge], class: "form" do |f| %>
+  <%= render 'shared/errors', resource: @badge %>
+  <div class="form-group">
+    <%= f.label :title, class: "control-label" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :image_url, class: "control-label" %>
+    <%= f.text_field :image_url, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, class: "control-label" %>
+    <%= f.text_field :description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'Правила присвоения', class: "control-label" %>
+    <%= f.select :rule_type, Specifications::Badges::BadgeDepartament.rules, { prompt: true }, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'Аргументы', class: "control-label" %>
+    <%= f.text_field :rule_value, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Сохранить", class: "btn btn-primary" %>
+<% end %>
+

@@ -17,16 +17,16 @@ class TestPassing < ApplicationRecord
     save!
   end
 
-  def completed?
-    current_question.nil?
-  end
-
   def number_questions
     test.questions.count
   end
 
   def remaining_questions
-    test.questions.order(:id).where('id > ?', self.current_question.id)
+    questions = self.test.questions.order(:id).where('id > ?', self.current_question.id)
+    if questions.empty?
+      complete
+    end
+    questions
   end
 
   def question_number
@@ -58,5 +58,11 @@ class TestPassing < ApplicationRecord
 
   def correct_answers
     current_question.answers.correct
+  end
+
+  def complete
+    self.passed = true
+    self.result = result_passage
+    self.successful = true if result_passage >= SUCCESS_RATIO
   end
 end

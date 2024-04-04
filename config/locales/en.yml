@@ -30,6 +30,7 @@ en:
       log_in: "Log in"
       sign_up: "Sign Up"
       admin_panel: "Admin Panel"
+      badges: 'Badges'
 
   tests:
     index:
@@ -59,14 +60,29 @@ en:
     gist_question_service:
       description: "A question about %{title} from TestGuru"
 
+  badges:
+    index:
+      image: 'Image'
+      title: 'title'
+      description: 'Description'
+      received: 'Received'
+      badges: 'Badges'
+      new_badge: 'New Badge'
+    obtained:
+      badges: 'Badges'
+
   admin:
     nav:
       admin_panel: "TestGuru Admin Panel"
       logout: "Log out"
+      badges: 'Badges'
     gists:
       index:
         author: "Author"
         question: "Question"
+    badges:
+      create:
+        success: "Badge was succesfully created."
     tests:
       create:
         success: "Test was succesfully created."

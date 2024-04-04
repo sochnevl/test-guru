@@ -13,13 +13,18 @@ class Test < ApplicationRecord
   scope :easy, -> { where(level: 0..1) }
   scope :medium, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
-  scope :sorted_tests_by_category, lambda { |category_name|
-                                     joins(:category)
-                                       .where(categories: { title: category_name })
-                                       .order(title: :desc)
-                                   }
 
-  def self.sorted_tests_titles_by_category(category_name)
-    sorted_tests_by_category(category_name).pluck(:title)
+  def self.list_by_category(category_name)
+    joins(:category)
+      .where(category: { title: category_name })
+      .order(:id)
+  end
+
+  def self.list_by_level(level)
+    where(level: level).order(:id)
+  end
+
+  def self.available_levels
+    all.order(:level).pluck(:level)
   end
 end
