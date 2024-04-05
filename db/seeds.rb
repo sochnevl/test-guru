@@ -1,12 +1,6 @@
-# frozen_string_literal: true
-
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.find_or_create_by([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.find_or_create_by(name: 'Luke', movie: movies.first)
+User.destroy_all
+Category.destroy_all
+Badge.destroy_all
 
 #  пользователи
 alex, kate, nikita, borysik, admin =
@@ -30,15 +24,15 @@ programming, movies, sport =
 test_ruby, test_html =
   programming.tests.create!([
                               # тесты по программированию
-                              { title: 'Ruby', level: 1, author: alex },
-                              { title: 'HTML', level: 1, author: kate }
+                              { title: 'Ruby', level: 5, author: alex },
+                              { title: 'HTML', level: 5, author: kate }
                             ])
 
 easy_test_movies, test_harry_potter =
   movies.tests.create!([
                          # тесты по кино
-                         { title: 'Кино', level: 1, author: nikita },
-                         { title: 'Гарри Поттер', level: 1, author: nikita }
+                         { title: 'Кино', level: 3, author: nikita },
+                         { title: 'Гарри Поттер', level: 3, author: nikita }
                        ])
 
 # вопросы по ruby:
@@ -206,17 +200,20 @@ harry_potter_question4.answers.create!([
                                          { body: 'Том Реддл', correct: false }
                                        ])
 
-alex.test_passings.create!([
-                           { status: 'пройден', test: test_ruby },
-                           { status: 'в процессе', test: test_harry_potter }
-                         ])
-
-kate.test_passings.create!([
-                           { status: 'в процессе', test: test_harry_potter },
-                           { status: 'в процессе', test: test_ruby }
-                         ])
-
-nikita.test_passings.create!([
-                             { status: 'в процессе', test: test_html },
-                             { status: 'пройден', test: easy_test_movies }
-                           ])
+level_3, level_5, movies_badges, programming_badges, first = Badge.create!([
+                                                                            { title: 'Тесты 3 уровня', description: 'Пройдите все тесты 3 уровня',
+                                                                              image_url: 'https://cdn5.vectorstock.com/i/1000x1000/41/54/little-duck-vector-1714154.jpg', rule_type: 'AllByLevel',
+                                                                              rule_value: "3" },
+                                                                            { title: 'Тесты 5 уровня', description: 'Пройдите все тесты 5 уровня',
+                                                                              image_url: 'https://gas-kvas.com/uploads/posts/2023-01/thumbs/1673527108_gas-kvas-com-p-silach-risunok-detskii-2.jpg', rule_type: 'AllByLevel',
+                                                                              rule_value: "5" },
+                                                                            { title: "Категория 'Кино'", description: "Пройдите все тесты в категории 'Кино'",
+                                                                              image_url: 'https://yt3.googleusercontent.com/T5TCR1pmz9vr_nJzcS0yEmthBRfHEOl4wa9PuvD5vznGguoimYFgLG5U135evw3ImsjMIVEtn1Y=s900-c-k-c0x00ffffff-no-rj',
+                                                                              rule_type: 'AllByCategory', rule_value: "Кино" },
+                                                                            { title: "Категория 'Программирование'", description: "Пройдите все тесты в категории 'Программирование'",
+                                                                              image_url: 'https://cdni.iconscout.com/illustration/premium/thumb/cute-little-kid-coding-on-laptop-4619253-3821966.png',
+                                                                              rule_type: 'AllByCategory', rule_value: "Программирование" },
+                                                                            { title: 'Пройден!', description: 'Пройдите любой тест',
+                                                                              image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHw3IkybtLMS6hBvuiElVDj5F9UMuec9h64zB0IqAofQ&s',
+                                                                              rule_type: 'SuccessfulFirstAttempt', rule_value: "" }
+                                                                          ])
