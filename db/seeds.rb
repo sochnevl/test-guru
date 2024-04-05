@@ -24,15 +24,15 @@ programming, movies, sport =
 test_ruby, test_html =
   programming.tests.create!([
                               # тесты по программированию
-                              { title: 'Ruby', level: 5, author: alex },
+                              { title: 'Ruby', level: 5, author: alex, allotted_time: 75 },
                               { title: 'HTML', level: 5, author: kate, allotted_time: 75 }
                             ])
 
 easy_test_movies, test_harry_potter =
   movies.tests.create!([
                          # тесты по кино
-                         { title: 'Кино', level: 3, author: nikita },
-                         { title: 'Гарри Поттер', level: 3, author: nikita }
+                         { title: 'Кино', level: 3, author: nikita, allotted_time: 75 },
+                         { title: 'Гарри Поттер', level: 3, author: nikita, allotted_time: 75 }
                        ])
 
 # вопросы по ruby:
