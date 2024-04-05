@@ -25,7 +25,7 @@ test_ruby, test_html =
   programming.tests.create!([
                               # тесты по программированию
                               { title: 'Ruby', level: 5, author: alex },
-                              { title: 'HTML', level: 5, author: kate }
+                              { title: 'HTML', level: 5, author: kate, allotted_time: 75 }
                             ])
 
 easy_test_movies, test_harry_potter =

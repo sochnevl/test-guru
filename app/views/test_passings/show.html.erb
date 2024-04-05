@@ -1,3 +1,6 @@
+<%= content_tag :div, class: "timer", data: {time: @test_passing.time_control} do %>  
+<% end %>
+
 <div class="my-3">
   <%= render 'progress_bar', current: @test_passing.question_number, total: @test_passing.number_questions %>
 </div>
@@ -17,7 +20,7 @@
     </p>
   <% end %>
   
-  <p> <%= form.submit t('.next') %> </p>
+  <p> <%= form.submit t('.next'), id: 'btn-next' %> </p>
 <% end %>
 
 <p><%= button_to t('.gist_question'), gists_path(@test_passing), method: :post %></p>
